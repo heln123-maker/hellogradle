@@ -1,9 +1,7 @@
 plugins {
     id 'java'
-    id 'application' // Apply the application plugin
+    id 'application'
 }
-
-mainClassName = 'com.yourpackage.MainClass' // Specify your main class here
 
 repositories {
     mavenCentral()
@@ -12,5 +10,13 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.4.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+application {
+    mainClass = 'com.example.Main' // ✅ Use this instead of mainClassName
+}
+
+test {
+    useJUnitPlatform()
 }
