@@ -4,6 +4,12 @@ plugins {
     id 'org.junit.platform.gradle.plugin' version '1.7.2' 
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 repositories {
     mavenCentral()
 }
