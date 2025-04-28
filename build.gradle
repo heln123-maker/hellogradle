@@ -1,13 +1,22 @@
 plugins {
-    id 'java' // if not already present
-    id 'org.junit.platform.gradle.plugin' version '1.8.2' // add this line
+    id 'application'
 }
 
-test {
-    useJUnitPlatform()  // this enables JUnit 5 (JUnit Platform)
+repositories {
+    mavenCentral()
 }
-
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'  // add JUnit 5 dependency
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    // JUnit 5 (Jupiter)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    
+    // JUnit 5 Platform Runner
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+}
+test {
+    useJUnitPlatform() // This tells Gradle to use JUnit 5 for tests
+}
+
+application {
+    mainClass = 'App'
 }
