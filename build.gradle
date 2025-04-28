@@ -1,14 +1,13 @@
 plugins {
-    id 'application'
     id 'java'
-    id 'org.junit.platform.gradle.plugin' version '1.7.2' 
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(21) // Specify Java 21
     }
 }
+
 
 repositories {
     mavenCentral()
@@ -32,4 +31,4 @@ task hello {
     doLast {
         println 'Hello, Gradle!'
     }
-}//
+}
