@@ -20,8 +20,3 @@ test {
 application {
     mainClass = 'App'
 }
-task hello {
-    doLast {
-        println 'Hello, Gradle!'
-    }
-}
