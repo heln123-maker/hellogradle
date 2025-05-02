@@ -22,3 +22,8 @@ tasks.test {
 application {
     mainClass.set('App') // ✅ Use 'mainClass.set' for Gradle 7+
 }
+
+tools {
+    gradle 'Gradle 7.6'
+}
+
