@@ -1,5 +1,5 @@
 plugins {
-    id 'application'
+    id 'java'
 }
 
 repositories {
@@ -7,23 +7,9 @@ repositories {
 }
 
 dependencies {
-    // JUnit 5
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
-    testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+    testImplementation 'junit:junit:4.13.2'
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-tools {
-    gradle 'Gradle 7.6'
-}
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-
-application {
-    mainClass.set('App') // or 'com.example.App' if in a package
+test {
+    useJUnit()
 }
