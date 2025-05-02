@@ -18,5 +18,5 @@ test {
 }
 
 application {
-    mainClass = 'App'
+    mainClassName = 'App'
 }
