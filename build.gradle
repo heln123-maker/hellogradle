@@ -16,6 +16,9 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+tools {
+    gradle 'Gradle 7.6'
+}
 
 application {
     mainClass.set('App') // or 'com.example.App' if in a package
