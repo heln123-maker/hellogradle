@@ -19,6 +19,10 @@ tasks.test {
 tools {
     gradle 'Gradle 7.6'
 }
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 application {
     mainClass.set('App') // or 'com.example.App' if in a package
